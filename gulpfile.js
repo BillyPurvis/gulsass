@@ -4,6 +4,7 @@ var	autoprefixer = require('gulp-autoprefixer');
 var	minifycss = require('gulp-minify-css');
 var	rename = require('gulp-rename');
 var util = require('gulp-util');
+var connect = require('gulp-connect');
 log = util.log;
 
 //gulp.task('mytask', ['array', 'of', 'task', 'names'], function () {
@@ -14,17 +15,17 @@ log = util.log;
 gulp.task("sass", function () {
     'use strict';
     log("Generating CSS files " + (new Date()).toString());
-    gulp.src("main.scss")
+    gulp.src("./src/main.scss")
 		.pipe(sass({ style: 'expanded' }))
 					.pipe(autoprefixer("last 3 version", "safari 5", "ie 8", "ie 9"))
-		.pipe(gulp.dest("css"))
+		.pipe(gulp.dest("./src/assets/css"))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(minifycss())
-		.pipe(gulp.dest("css"));
+		.pipe(gulp.dest("./src/assets/css"));
 });
 
 gulp.task("watch", function () {
     'use strict';
     log("Watching Sass Files");
-    gulp.watch("main.scss", ["sass"]);
+    gulp.watch("./src/main.scss", ["sass"]);
 });
