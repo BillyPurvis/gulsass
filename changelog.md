@@ -17,3 +17,11 @@ I'll pretend we're here, I forgot.
 * Better file management of CSS
 * Was gonna add gulp-connect, but still in the works. 
 * Updated README
+
+1.0.3v
+We did more! 
+
+* Added ../css/modules
+* Added ../css/partials
+* Moved main.scss to ./assets/css
+

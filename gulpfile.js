@@ -15,7 +15,7 @@ log = util.log;
 gulp.task("sass", function () {
     'use strict';
     log("Generating CSS files " + (new Date()).toString());
-    gulp.src("./src/main.scss")
+    gulp.src("./src/assets/css/main.scss")
 		.pipe(sass({ style: 'expanded' }))
 					.pipe(autoprefixer("last 3 version", "safari 5", "ie 8", "ie 9"))
 		.pipe(gulp.dest("./src/assets/css"))
@@ -27,5 +27,5 @@ gulp.task("sass", function () {
 gulp.task("watch", function () {
     'use strict';
     log("Watching Sass Files");
-    gulp.watch("./src/main.scss", ["sass"]);
+    gulp.watch("./src/assets/css/main.scss", ["sass"]);
 });
