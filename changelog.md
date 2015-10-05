@@ -25,3 +25,8 @@ We did more!
 * Added ../css/partials
 * Moved main.scss to ./assets/css
 
+1.0.4v
+I fixed things! 
+
+* Moved index.html back to the root dir
+
